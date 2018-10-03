@@ -1,9 +1,14 @@
 Fedora 24+
 ==========
 
-Beginning with Fedora 24, Pulp is included in the Fedora project and no special repositories are
-needed to install there.
+Beginning with Fedora 24, Pulp is included in the Fedora project, however we
+recommend to install the upstream repository anyway, which is usually more
+updated. Run the following command to add the repository:
 
+```
+# . /etc/os-release
+# dnf config-manager --add-repo https://repos.fedorapeople.org/pulp/pulp/stable/2.17/fedora-${VERSION_ID}/$(uname -m)/
+```
 
 Database Server
 ---------------
